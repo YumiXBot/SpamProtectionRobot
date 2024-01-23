@@ -43,7 +43,7 @@ async def main():
     await spr.stop()
 
 
-@spr.on_message(filters.command(["help", "start"]), group=2)
+@spr.on_message(filters.command(["help", "astart"]), group=2)
 async def help_command(_, message: Message):
     if message.chat.type != ChatType.PRIVATE:
         kb = ikb({"Help": f"https://t.me/{BOT_USERNAME}?start=help"})
@@ -51,9 +51,9 @@ async def help_command(_, message: Message):
     kb = ikb(
         {
             "Help": "bot_commands",
-            "Repo": "https://github.com/TheHamkerCat/SpamProtectionRobot",
+            "Repo": "https://t.me/ALONE_WAS_BOT",
             "Add Me To Your Group": f"https://t.me/{BOT_USERNAME}?startgroup=new",
-            "Support Chat (for now)": "https://t.me/WBBSupport",
+            "Updates (for now)": "https://t.me/AloneXBots",
         }
     )
     mention = message.from_user.mention
